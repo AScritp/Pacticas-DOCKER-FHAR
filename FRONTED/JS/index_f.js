@@ -22,15 +22,15 @@
           const paragf_1 = document.createElement('p');
           const paragf_2 = document.createElement('p');
           const paragf_3 = document.createElement('p');
-          const paragf_4 = document.createElement('p');
+          // const paragf_4 = document.createElement('p');
           paragf_1.textContent = element.id;
-          paragf_2.textContent = element.name;
-          paragf_3.textContent = element.price;
-          paragf_4.textContent = element.description;
+          paragf_2.textContent = element.nombre;
+          paragf_3.textContent = element.precio;
+          // paragf_4.textContent = element.description;
           div.appendChild(paragf_1);
           div.appendChild(paragf_2);
           div.appendChild(paragf_3);
-          div.appendChild(paragf_4);
+          // div.appendChild(paragf_4);
           body.appendChild(div);
       });
   }

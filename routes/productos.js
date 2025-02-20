@@ -1,22 +1,11 @@
-const DATABASELESS=`https://zingybalance-us.backendless.app/api/data/Productos`
+const productos=[
+    {id:1, nombre:'producto1', precio:100},
+    {id:2, nombre:'producto2', precio:200},
+    {id:3, nombre:'producto3', precio:300},
+]
 
 async function Obtenerlistaproductos() {
-    try {
-        const response = await fetch(DATABASELESS);
-        if (!response.ok) {
-            throw new Error('Error al obtener la lista de productos');
-        }
-        const productos = await response.json();
-        return productos.map(producto=>({
-            id:producto.ID,
-            name:producto.ProductName,
-            description:producto.ProductDescrip,
-            price:producto.ProductPrice,
-        }));
-    } catch (err) {
-        console.error(err.message);
-        throw err;
-    }
+return productos
 }
 
 module.exports = { 
