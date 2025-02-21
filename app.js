@@ -6,7 +6,7 @@ const Obtenerlistaproductos = require('./routes/productos');
 
 app.use(bodyParser.json())
 app.get(('/'), (req,res)=>{
-    res.send('Hello World');
+    res.send(`Hello World I'm a Docker Container`);
 })
 
 app.route('/productos')
