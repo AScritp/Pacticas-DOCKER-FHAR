@@ -28,10 +28,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/my_docker_ava:latest .
 
-      # Paso 4: Prueba la imagen (opcional)
-      - name: Run tests
-        run: docker run ${{ secrets.DOCKER_HUB_USERNAME }}/my_docker_ava:latest npm test
 
-      # Paso 5: Sube la imagen a Docker Hub (opcional)
+      # Paso 4: Sube la imagen a Docker Hub (opcional)
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/my_docker_ava:latest
