@@ -1,5 +1,5 @@
   function inicio(){
-      axios.get('http://localhost:3000/productos/', {
+      axios.get('https://intuitive-reverence-production.up.railway.app/productos', {
           responseType: 'json'
         })
           .then(function(res) {
