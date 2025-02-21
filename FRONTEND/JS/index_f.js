@@ -1,5 +1,5 @@
   function inicio(){
-      axios.get('https://intuitive-reverence-production.up.railway.app/productos', {
+      axios.get('https://mydockerava-production.up.railway.app/productos', {
           responseType: 'json'
         })
           .then(function(res) {
