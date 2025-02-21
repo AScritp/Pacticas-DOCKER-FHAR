@@ -4,9 +4,13 @@ const bodyParser = require('body-parser')
 
 const Obtenerlistaproductos = require('./routes/productos');
 
+//PRUEBA "CARGAR INDEX.HTML"
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'FRONTEND')));
+
 app.use(bodyParser.json())
 app.get(('/'), (req,res)=>{
-    res.send(`Hello World I'm a Docker Container`);
+    res.sendFile(path.join(__dirname, 'FRONTEND', 'index.html'));
 })
 
 app.route('/productos')
