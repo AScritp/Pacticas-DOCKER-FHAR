@@ -26,4 +26,5 @@ res.status(500).send('Error al obtener la lista de productos');
 
 app.listen(9000, '0.0.0.0',()=>{
     console.log('Server is running on port 3000');
+    console.log('http://localhost:9000');
 })
